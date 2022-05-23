@@ -1,12 +1,14 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
 
-import { COLORS } from '../../constants';
-import VisuallyHidden from '../VisuallyHidden';
+import VisuallyHidden from "../VisuallyHidden";
+import { PbBaseStyled, PbContentStyled } from "./ProgressBar.styled";
 
 const ProgressBar = ({ value, size }) => {
-  return <strong>{value}</strong>;
+  return (
+    <PbBaseStyled size={size}>
+      <PbContentStyled value={value} />
+    </PbBaseStyled>
+  );
 };
 
 export default ProgressBar;
